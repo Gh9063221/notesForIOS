@@ -26,4 +26,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_myLabel release];
+    [super dealloc];
+}
+- (IBAction)leftButton:(id)sender {
+    _myLabel.text = @"left";
+}
+
+- (IBAction)rightButton:(id)sender {
+    _myLabel.text = @"right";
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    NSString *str = [sender titleForState:UIControlStateNormal];
+    _myLabel.text = str;
+}
 @end

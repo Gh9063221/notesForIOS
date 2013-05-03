@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ZHTViewController : UIViewController
+@property (retain, nonatomic) IBOutlet UILabel *myLabel;
+- (IBAction)leftButton:(id)sender;
+- (IBAction)rightButton:(id)sender;
+- (IBAction)buttonPressed:(id)sender;
 
 @end
